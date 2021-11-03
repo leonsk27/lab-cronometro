@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="lista">
+    <div class="contador">
+      <h1>{{tiempoActual.min}}:</h1>
+        <h1>{{tiempoActual.seg}}.</h1>
+        <h1>{{tiempoActual.centiseg}}</h1>
+    </div>
+        <div class="div-boton">
+          <button (click)="reiniciarVuelta()">{{nombreReiniciarVuelta}}</button>
+          <button (click)="iniciarPausar()">{{nombreIniciarPausar}}</button>
+        </div>
+    <table id="customers">
+      <tr>
+        <th>Vuelta</th>
+        <th>Hora</th>
+        <th>Tiempo total</th>
+      </tr>
+      <tr>
+        <td>{{tiempoActual.vuelta}}</td>
+        <td>
+          {{tiempoActual.vueltaMin}}:
+          {{tiempoActual.vueltaSeg}}.
+          {{tiempoActual.vueltaCentiseg}}
+        </td>
+        <td>
+          {{tiempoActual.min}}:
+          {{tiempoActual.seg}}.
+          {{tiempoActual.centiseg}}
+          </td>
+      </tr>
+      <tr *ngFor="let t of list">
+        <td>{{t[0]}}</td>
+        <td>
+          {{t[1]}}:
+        {{t[2]}}.
+        {{t[3]}}
+        </td>
+        <td>
+          {{t[4]}}:
+        {{t[5]}}.
+        {{t[6]}}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
